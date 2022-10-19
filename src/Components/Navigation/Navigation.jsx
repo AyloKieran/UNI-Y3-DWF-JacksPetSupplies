@@ -1,10 +1,24 @@
-import { Link } from "react-router-dom";
+import NavLink from "./NavLink";
+
+const LINKS = [
+    {
+        title: "Home",
+        url: "/"
+    },
+    {
+        title: "Shop",
+        url: "/shop"
+    }
+]
 
 function Navigation() {
     return (
         <div>
-            <Link to="/">Home</Link>
-            <Link to="/shop">Shop</Link>
+            {LINKS.map((link, index) => {
+                return (
+                    <NavLink to={link.url} title={link.title} key={index} />
+                )
+            })}
         </div>
    )
  }
