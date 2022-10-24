@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { generatePageTitle } from "../Utilities";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faCartShopping, faBars, faCat, faSearch, faHome, faClose, faArrowRight, faStethoscope, faShieldDog, faPaw, faTruckRampBox, faBasketShopping, faChevronRight, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 
 function Home() {
 
@@ -28,37 +30,37 @@ function Home() {
       <header className="md:hidden bg-jack text-white flex flex-col">
         <div className="p-2 grid grid-cols-3 text-2xl pb-0">
           <button className="flex justify-start my-auto" onClick={() => { _toggleNav(); }}>
-            <i className="fa fa-bars"></i>
+            <FontAwesomeIcon icon={faBars} />
           </button>
           <div className="flex justify-center tracking-wider font-black text-md">
-            J<i className="fa fa-cat"></i>CK'S
+            J<FontAwesomeIcon icon={faCat} />CK'S
           </div>
           <div className="flex justify-end gap-4 my-auto">
-            <i className="fa fa-cart-shopping"></i>
-            <i className="fa fa-user"></i>
+            <FontAwesomeIcon icon={faCartShopping} />
+            <FontAwesomeIcon icon={faUser} />
           </div>
         </div>
         <div className="p-2">
           <div className="flex flex-grow bg-white rounded text-gray-600 p-2 px-3 justify-between">
             Search
-            <i className="fa fa-search my-auto text-jack"></i>
+            <FontAwesomeIcon icon={faSearch} className="my-auto text-jack" />
           </div>
         </div>
 
         <div className={`absolute top-0 left-0 right-0 bottom-0 bg-black/30 backdrop-blur-sm flex-col flex transition-all ${modalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} id="nav">
           <div className="h-[45px] flex p-2">
             <div className="aspect-square bg-jackLight flex p-2 justify-center items-center rounded" onClick={() => { setModalOpen(false); }}>
-              <i className="fa fa-close text-2xl"></i>
+              <FontAwesomeIcon icon={faClose} className="text-2xl" />
             </div>
           </div>
           <div className="bg-white text-black flex flex-col">
             {["Home", "Shop", "Adoption"].map((elementInArray, index) => (
               <a href='#' className="flex justify-between p-4 border-b-2 hover:bg-gray-100" key={index}>
                 <div className="flex gap-4 my-auto">
-                  <i className="fa fa-home text-jackLight my-auto"></i>
+                  <FontAwesomeIcon icon={faHome} className="text-jackLight my-auto" />
                   <span className="font-semibold">{elementInArray}</span>
                 </div>
-                <i className="fa fa-chevron-right text-gray-500 my-auto"></i>
+                <FontAwesomeIcon icon={faChevronRight} className="text-gray-500 my-auto" />
               </a>
             )
             )}
@@ -68,21 +70,21 @@ function Home() {
       </header>
       <header className="hidden md:flex bg-jack text-white gap-4 p-2 px-4">
         <div className="flex justify-start tracking-wider font-black text-2xl my-auto">
-          J<i className="fa fa-cat"></i>CK'S
+          J<FontAwesomeIcon icon={faCat} />CK'S
         </div>
         <div className="flex-grow flex border-l-2 border-jackLight/60 text-gray-100">
           {["Home", "Shop", "Adoption"].map((elementInArray, index) => (
             <a href="#" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jackLight hover:text-white rounded" key={index}>
-              <i className="fa fa-home"></i>
+              <FontAwesomeIcon icon={faHome} />
               <span className="font-semibold">{elementInArray}</span>
             </a>
           )
           )}
         </div>
         <div className="flex justify-end gap-4 my-auto">
-          <i className="fa fa-search"></i>
-          <i className="fa fa-cart-shopping"></i>
-          <i className="fa fa-user"></i>
+          <FontAwesomeIcon icon={faSearch} />
+          <FontAwesomeIcon icon={faCartShopping} />
+          <FontAwesomeIcon icon={faUser} />
         </div>
       </header>
       <main className="flex-grow flex flex-col gap-12 mb-4 p-4 max-w-4xl mx-auto">
@@ -105,7 +107,7 @@ function Home() {
             )}
             <a href="#" className="group flex flex-col w-full gap-2">
               <div className="rounded-full flex justify-center items-center aspect-square bg-gray-100 dark:bg-gray-700">
-                <i className="fa fa-arrow-right text-xl group-hover:text-3xl transition-all"></i>
+                <FontAwesomeIcon icon={faArrowRight} className="text-xl group-hover:text-3xl transition-all" />
               </div>
               <p className="mx-auto group-hover:underline">More Products</p>
             </a>
@@ -131,7 +133,7 @@ function Home() {
             )}
             <a href="#" className="group flex flex-col w-full gap-2 bg-gray-100 dark:bg-gray-700 rounded-xl p-2">
               <div className="rounded-xl flex justify-center items-center aspect-square bg-gray-200 dark:bg-gray-500">
-                <i className="fa fa-arrow-right text-xl group-hover:text-3xl transition-all"></i>
+                <FontAwesomeIcon icon={faArrowRight} className="text-xl group-hover:text-3xl transition-all" />
               </div>
               <div className="flex flex-col text-center">
                 <p className="font-semibold group-hover:underline">176 More Pups</p>
@@ -147,9 +149,9 @@ function Home() {
             {["Taking your dog for a walk is good for them, with some more text to make it wrap onto another line or two", "ANOTHER ONE HERE", "AND MAYBE ANOTHER ONE"].map((elementInArray, index) => (
               <div className="flex bg-gray-100 dark:bg-gray-700 rounded-xl p-4 justify-center align-middle md:max-w-[500px] md:min-w-[250px] md:[&:nth-child(2n-1)]:mr-auto md:[&:nth-child(2n)]:ml-auto" key={index}>
                 <div className="flex text-center">
-                  <i className="font-black pr-4 fa fa-quote-left rotate-[-3deg] text-jack dark:text-jackLight mb-auto"></i>
+                  <FontAwesomeIcon icon={faQuoteLeft} className="font-black pr-4 rotate-[-3deg] text-jack dark:text-jackLight mb-auto" />
                   {elementInArray}
-                  <i className="font-black pl-4 fa fa-quote-right rotate-[3deg] text-jack dark:text-jackLight mt-auto"></i>
+                  <FontAwesomeIcon icon={faQuoteRight} className="font-black pl-4 rotate-[3deg] text-jack dark:text-jackLight mt-auto" />
                 </div>
               </div>
             )
@@ -174,31 +176,31 @@ function Home() {
           <div className="flex flex-wrap justify-center gap-4 md:flex-nowrap">
             <a href="#" className="group flex flex-col w-full gap-2 max-w-[30%]">
               <div className="rounded-full flex justify-center items-center aspect-square bg-jack/10 dark:bg-gray-800">
-                <i className="fa fa-stethoscope text-4xl text-jack dark:text-white group-hover:text-5xl transition-all"></i>
+                <FontAwesomeIcon icon={faStethoscope} className="text-4xl text-jack dark:text-white group-hover:text-5xl transition-all" />
               </div>
               <p className="mx-auto group-hover:underline">Vet Advice</p>
             </a>
             <a href="#" className="group flex flex-col w-full gap-2 max-w-[30%]">
               <div className="rounded-full flex justify-center items-center aspect-square bg-jack/10 dark:bg-gray-800">
-                <i className="fa fa-shield-dog text-4xl text-jack dark:text-white group-hover:text-5xl transition-all"></i>
+                <FontAwesomeIcon icon={faShieldDog} className="text-4xl text-jack dark:text-white group-hover:text-5xl transition-all" />
               </div>
               <p className="mx-auto group-hover:underline">Pup Adoption</p>
             </a>
             <a href="#" className="group flex flex-col w-full gap-2 max-w-[30%]">
               <div className="rounded-full flex justify-center items-center aspect-square bg-jack/10 dark:bg-gray-800">
-                <i className="fa fa-paw text-4xl text-jack dark:text-white group-hover:text-5xl transition-all"></i>
+                <FontAwesomeIcon icon={faPaw} className="text-4xl text-jack dark:text-white group-hover:text-5xl transition-all" />
               </div>
               <p className="mx-auto group-hover:underline">Pet Advice</p>
             </a>
             <a href="#" className="group flex flex-col w-full gap-2 max-w-[30%]">
               <div className="rounded-full flex justify-center items-center aspect-square bg-jack/10 dark:bg-gray-800">
-                <i className="fa fa-truck-ramp-box text-4xl text-jack dark:text-white group-hover:text-5xl transition-all"></i>
+                <FontAwesomeIcon icon={faTruckRampBox} className="text-4xl text-jack dark:text-white group-hover:text-5xl transition-all" />
               </div>
               <p className="mx-auto group-hover:underline">Free Delivery</p>
             </a>
             <a href="#" className="group flex flex-col w-full gap-2 max-w-[30%]">
               <div className="rounded-full flex justify-center items-center aspect-square bg-jack/10 dark:bg-gray-800">
-                <i className="fa fa-basket-shopping text-4xl text-jack dark:text-white group-hover:text-5xl transition-all"></i>
+                <FontAwesomeIcon icon={faBasketShopping} className="text-4xl text-jack dark:text-white group-hover:text-5xl transition-all" />
               </div>
               <p className="mx-auto group-hover:underline">Shop Products</p>
             </a>
