@@ -7,11 +7,11 @@ import {
 import Navigation from "./Components/Navigation/Navigation";
 import Home from "./Routes/Home";
 import Shop from "./Routes/Shop";
- 
+
 function App() {
-   return (
+  return (
     <Router>
-      <Navigation />
+      {/* <Navigation /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />

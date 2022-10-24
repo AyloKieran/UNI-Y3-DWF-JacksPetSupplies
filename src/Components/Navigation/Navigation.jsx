@@ -1,4 +1,4 @@
-import NavLink from "./NavLink";
+// import NavLink from "./NavLink";
 
 const LINKS = [
     {
@@ -20,7 +20,7 @@ function Navigation() {
                 )
             })}
         </div>
-   )
- }
- 
- export default Navigation
+    )
+}
+
+export default Navigation

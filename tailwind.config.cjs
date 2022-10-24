@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["src/**/*.jsx"],
+  content: ["**/*.{jsx,html}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        jack: '#1c49c2',
+        jackLight: '#406be2'
+      }
+    },
   },
   plugins: [],
 }
