@@ -1,5 +1,5 @@
 import { getProducts } from '../../Data/Products';
-import ProductsItem from './ProductsItem'
+import { ProductsItem } from './';
 
 function Products() {
   let _NumberOfProducts = 11,

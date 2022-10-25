@@ -1,6 +1,5 @@
-import { faStethoscope, faShieldDog, faPaw, faTruckRampBox, faBasketShopping } from '@fortawesome/free-solid-svg-icons'
-
-import ServicesItem from "./ServicesItem";
+import { ServicesItem } from './';
+import { faStethoscope, faShieldDog, faPaw, faTruckRampBox, faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 
 function Services() {
 

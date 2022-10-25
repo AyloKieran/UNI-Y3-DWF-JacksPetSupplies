@@ -1,5 +1,5 @@
-import Slider from "react-slick";
 import { getCarouselItems } from "../../Data/Carousel";
+import Slider from "react-slick";
 
 function Carousel() {
 

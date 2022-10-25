@@ -1,10 +1,9 @@
-import DesktopNavigation from "../Navigation/DesktopNavigation";
-import MobileNavigation from "../Navigation/MobileNavigation";
+import { MobileNavigation, DesktopNavigation } from "../Navigation";
 
 function Header() {
 
     return (
-        <header>
+        <header className="sticky top-0 z-20">
             <MobileNavigation />
             <DesktopNavigation />
         </header>

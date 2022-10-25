@@ -1,5 +1,5 @@
-import AdoptionsItem from './AdoptionsItem';
 import { getAdoptions } from '../../Data/Adoptions';
+import { AdoptionsItem } from './';
 
 function Adoptions() {
   let _NumberOfAnimals = 5,

@@ -1,7 +1,7 @@
-import TipsItem from './TipsItem';
+import { useEffect, useState } from 'react';
+import { TipsItem } from './';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
 
 function Tips() {
 

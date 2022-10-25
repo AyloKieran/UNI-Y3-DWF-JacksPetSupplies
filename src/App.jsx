@@ -1,31 +1,23 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
-
-import Header from "./Components/Layout/Header";
-import Footer from "./Components/Layout/Footer";
-
-import Home from "./Routes/Home/Home";
-import Shop from "./Routes/Shop/Shop";
-import Adoption from "./Routes/Adoption/Adoption";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AppLayout } from "./Components/Layout";
+import { Home, Shop, Adoption, NotFound } from "./Routes";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <div className="flex-grow flex flex-col max-w-screen overflow-x-hidden dark:bg-gray-900 dark:text-white">
-        <main className="flex-grow mb-4 p-4 max-w-4xl mx-auto">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/adoption" element={<Adoption />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route index path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/adoption" element={<Adoption />} />
+          <Route path="/auth" element="">
+            <Route path="/auth/login" element="" />
+            <Route path="/auth/register" element="" />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

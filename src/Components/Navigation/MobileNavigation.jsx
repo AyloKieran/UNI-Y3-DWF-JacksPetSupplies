@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCartShopping, faCat, faSearch, faHome, faBars, faClose, faChevronRight, faShop, faShieldDog } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "react-router-dom";
 
 function MobileNavigation() {
 
@@ -42,7 +42,7 @@ function MobileNavigation() {
                 </div>
             </div>
 
-            <div className={`absolute top-0 left-0 right-0 bottom-0 bg-black/30 backdrop-blur-sm flex-col flex transition-all ${modalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} id="nav">
+            <div className={`absolute top-0 left-0 right-0 bottom-0 flex-col flex transition-all z-10 ${modalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} id="nav">
                 <div className="h-[45px] flex p-2">
                     <div className="aspect-square bg-jackLight flex p-2 justify-center items-center rounded" onClick={() => { setModalOpen(false); }}>
                         <FontAwesomeIcon icon={faClose} className="text-2xl" />

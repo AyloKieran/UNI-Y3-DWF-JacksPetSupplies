@@ -14,7 +14,7 @@ function ProductsItem(props) {
           <FontAwesomeIcon icon={faArrowRight} className="text-xl group-hover:text-3xl transition-all" />
         </div>
       }
-      <p className="text-center group-hover:underline line-clamp-2">{props.title}</p>
+      <p className="text-center group-hover:underline line-clamp-2 text-sm">{props.title}</p>
     </Link>
   )
 }

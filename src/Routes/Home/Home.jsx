@@ -1,15 +1,7 @@
 import { useEffect } from "react";
 import { generatePageTitle } from "../../Utilities";
-
-import PageContent from "../../Components/Layout/PageContent";
-import Section from "../../Components/Layout/Section";
-import Carousel from "../../Components/Layout/Carousel";
-import Tips from "./Tips";
-import Services from "./Services";
-import Join from "./Join";
-import Products from "./Products";
-import Adoptions from "./Adoptions";
-
+import { PageContent, Section, Carousel } from "../../Components/Layout";
+import { Adoptions, Tips, Services, Join, Products } from "./";
 
 function Home() {
 
