@@ -1,13 +1,14 @@
 import AdoptionsItem from './AdoptionsItem';
-
-import dog from '../../assets/dog.webp'
+import { getAdoptions } from '../../Data/Adoptions';
 
 function Adoptions() {
+  let _NumberOfAnimals = 5,
+    _AnimalsToList = Array.from(getAdoptions()).slice(0, _NumberOfAnimals);
 
   return (
     <div className="grid grid-cols-3 gap-4 md:grid-cols-6">
-      {["Fluffy", "Dexter", "Spark", "Tilly", "Dave"].map((elementInArray, index) => (
-        <AdoptionsItem name={elementInArray} age={`${index + 1} months old`} image={dog} key={index} />
+      {_AnimalsToList.map((animal, index) => (
+        <AdoptionsItem name={animal.name} age={animal.age} image={animal.image} key={index} />
       )
       )}
       <AdoptionsItem name="173 More Pups" age="need adopting" link="/adoption"></AdoptionsItem>

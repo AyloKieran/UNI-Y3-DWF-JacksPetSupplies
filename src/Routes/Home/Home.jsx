@@ -30,7 +30,7 @@ function Home() {
         <Adoptions />
       </Section>
 
-      <Section title="Did you know? 🙋‍♀️" >
+      <Section title="Did you know? 🙋‍♀️" subtitle="Here are some of the top tips to get your new pup settled in your home" >
         <Tips />
       </Section>
 
