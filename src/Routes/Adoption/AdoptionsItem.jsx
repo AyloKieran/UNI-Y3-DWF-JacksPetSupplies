@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 function AdoptionsItem(props) {
 
   return (
-    <Link to={props.link} className="group flex flex-col w-full gap-2 bg-gray-100 dark:bg-gray-700 rounded-xl p-2">
+    <Link to={props.link} className="group flex flex-col w-full gap-1 bg-gray-100 dark:bg-gray-700 rounded-xl p-2">
       {props.image &&
         <img className="rounded-xl aspect-square object-cover bg-gray-200" src={props.image}></img>
       }

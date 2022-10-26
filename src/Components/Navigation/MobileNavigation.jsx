@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Auth } from "./";
+import { auth } from "../../FirebaseAuth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faCartShopping, faCat, faSearch, faHome, faBars, faClose, faChevronRight, faShop, faShieldDog } from '@fortawesome/free-solid-svg-icons';
+import { faShopLock, faCartShopping, faCat, faSearch, faHome, faBars, faClose, faChevronRight, faShop, faShieldDog } from '@fortawesome/free-solid-svg-icons';
 
 function MobileNavigation() {
 
     const [modalOpen, setModalOpen] = useState(false);
+    const [user, loading] = useAuthState(auth);
 
     function _toggleNav() {
         setModalOpen(!modalOpen);
@@ -32,7 +36,7 @@ function MobileNavigation() {
                 </div>
                 <div className="flex justify-end gap-4 my-auto">
                     <FontAwesomeIcon icon={faCartShopping} />
-                    <FontAwesomeIcon icon={faUser} />
+                    <Auth />
                 </div>
             </div>
             <div className="p-2">
@@ -70,6 +74,15 @@ function MobileNavigation() {
                         </div>
                         <FontAwesomeIcon icon={faChevronRight} className="text-gray-500 my-auto" />
                     </Link>
+                    {!loading && user &&
+                        <Link to="/secure" className="flex justify-between p-4 border-b-2 hover:bg-gray-100">
+                            <div className="flex gap-4 my-auto">
+                                <FontAwesomeIcon icon={faShopLock} className="text-jack-light my-auto" />
+                                <span className="font-semibold">Member's Area</span>
+                            </div>
+                            <FontAwesomeIcon icon={faChevronRight} className="text-gray-500 my-auto" />
+                        </Link>
+                    }
                 </div>
             </div>
         </div>

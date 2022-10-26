@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./Components/Layout";
 import { Home, Shop, Adoption, NotFound } from "./Routes";
+import { AuthLogin, AuthRegister, NoAccess } from "./Routes/Auth";
+import { Secure } from "./Routes/Secure";
 
 function App() {
   return (
@@ -10,10 +12,12 @@ function App() {
           <Route index path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/adoption" element={<Adoption />} />
-          <Route path="/auth" element="">
-            <Route path="/auth/login" element="" />
-            <Route path="/auth/register" element="" />
+          <Route path="/auth">
+            <Route path="/auth/login" element={<AuthLogin />} />
+            <Route path="/auth/register" element={<AuthRegister />} />
+            <Route path="/auth/no-access" element={<NoAccess />} />
           </Route>
+          <Route path="/secure" element={<Secure />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
