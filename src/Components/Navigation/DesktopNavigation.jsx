@@ -8,16 +8,16 @@ function DesktopNavigation() {
             <div className="flex justify-start tracking-wider font-black text-2xl my-auto">
                 J<FontAwesomeIcon icon={faCat} />CK'S
             </div>
-            <div className="flex-grow flex border-l-2 border-jackLight/60 text-gray-100">
-                <Link to="/" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jackLight hover:text-white rounded">
+            <div className="flex-grow flex border-l-2 border-jack-light/60 text-gray-100">
+                <Link to="/" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jack-light hover:text-white rounded">
                     <FontAwesomeIcon icon={faHome} />
                     <span className="font-semibold">Home</span>
                 </Link>
-                <Link to="/shop" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jackLight hover:text-white rounded">
+                <Link to="/shop" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jack-light hover:text-white rounded">
                     <FontAwesomeIcon icon={faShop} />
                     <span className="font-semibold">Shop</span>
                 </Link>
-                <Link to="/adoption" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jackLight hover:text-white rounded">
+                <Link to="/adoption" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jack-light hover:text-white rounded">
                     <FontAwesomeIcon icon={faShieldDog} />
                     <span className="font-semibold">Adoption</span>
                 </Link>

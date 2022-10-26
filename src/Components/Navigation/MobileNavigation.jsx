@@ -44,28 +44,28 @@ function MobileNavigation() {
 
             <div className={`absolute top-0 left-0 right-0 bottom-0 flex-col flex transition-all z-10 ${modalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} id="nav">
                 <div className="h-[45px] flex p-2">
-                    <div className="aspect-square bg-jackLight flex p-2 justify-center items-center rounded" onClick={() => { setModalOpen(false); }}>
+                    <div className="aspect-square bg-jack-light flex p-2 justify-center items-center rounded" onClick={() => { setModalOpen(false); }}>
                         <FontAwesomeIcon icon={faClose} className="text-2xl" />
                     </div>
                 </div>
                 <div className="bg-white text-black flex flex-col">
                     <Link to="/" className="flex justify-between p-4 border-b-2 hover:bg-gray-100">
                         <div className="flex gap-4 my-auto">
-                            <FontAwesomeIcon icon={faHome} className="text-jackLight my-auto" />
+                            <FontAwesomeIcon icon={faHome} className="text-jack-light my-auto" />
                             <span className="font-semibold">Home</span>
                         </div>
                         <FontAwesomeIcon icon={faChevronRight} className="text-gray-500 my-auto" />
                     </Link>
                     <Link to="/shop" className="flex justify-between p-4 border-b-2 hover:bg-gray-100">
                         <div className="flex gap-4 my-auto">
-                            <FontAwesomeIcon icon={faShop} className="text-jackLight my-auto" />
+                            <FontAwesomeIcon icon={faShop} className="text-jack-light my-auto" />
                             <span className="font-semibold">Shop</span>
                         </div>
                         <FontAwesomeIcon icon={faChevronRight} className="text-gray-500 my-auto" />
                     </Link>
                     <Link to="/adoption" className="flex justify-between p-4 border-b-2 hover:bg-gray-100">
                         <div className="flex gap-4 my-auto">
-                            <FontAwesomeIcon icon={faShieldDog} className="text-jackLight my-auto" />
+                            <FontAwesomeIcon icon={faShieldDog} className="text-jack-light my-auto" />
                             <span className="font-semibold">Adoption</span>
                         </div>
                         <FontAwesomeIcon icon={faChevronRight} className="text-gray-500 my-auto" />
