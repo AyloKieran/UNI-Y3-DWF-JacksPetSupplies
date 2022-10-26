@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { generatePageTitle } from "../../Utilities";
-
-import PageContent from "../../Components/Layout/PageContent";
+import { PageContent, Section } from "../../Components/Layout";
+import { Products } from "./";
 
 function Shop() {
 
@@ -10,8 +10,10 @@ function Shop() {
   });
 
   return (
-    <PageContent>
-      <h2>Shop</h2>
+    <PageContent className="w-full">
+      <Section title="Shop" subtitle="Take a look around at some of the best treats and toys that you know your little one will love!">
+        <Products />
+      </Section>
     </PageContent>
   )
 }

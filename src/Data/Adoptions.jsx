@@ -6,6 +6,10 @@ import tank from "../assets/Animals/tank.jpeg";
 import cane from "../assets/Animals/cane.jpeg";
 import benji from "../assets/Animals/benji.jpeg";
 import winston from "../assets/Animals/winston.jpeg";
+import dexter from "../assets/Animals/dexter.jpeg";
+import arlo from "../assets/Animals/arlo.jpeg";
+import kobe from "../assets/Animals/kobe.jpeg";
+import rocky from "../assets/Animals/rocky.jpeg";
 
 const ADOPTIONS = [
     {
@@ -47,6 +51,26 @@ const ADOPTIONS = [
         name: "Winston",
         age: "3 Years Old",
         image: winston
+    },
+    {
+        name: "Dexter",
+        age: "4 Years Old",
+        image: dexter
+    },
+    {
+        name: "Arlo",
+        age: "13 Months Old",
+        image: arlo
+    },
+    {
+        name: "Kobe",
+        age: "3 Years Old",
+        image: kobe
+    },
+    {
+        name: "Rocky",
+        age: "7 Years Old",
+        image: rocky
     },
 ];
 

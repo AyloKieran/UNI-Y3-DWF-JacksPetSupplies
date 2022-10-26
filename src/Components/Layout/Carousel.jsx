@@ -1,6 +1,9 @@
 import { getCarouselItems } from "../../Data/Carousel";
 import Slider from "react-slick";
 
+import "./slick-theme.min.css";
+import "./slick.min.css";
+
 function Carousel() {
 
     let settings = {

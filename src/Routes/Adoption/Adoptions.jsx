@@ -2,10 +2,7 @@ import { getAdoptions } from '../../Data/Adoptions';
 import { AdoptionsItem } from './';
 
 function Adoptions() {
-  let _NumberOfAnimals = 5,
-    _AnimalsToList = Array.from(getAdoptions())
-      .sort((a, b) => 0.5 - Math.random())
-      .slice(0, _NumberOfAnimals);
+  let _AnimalsToList = Array.from(getAdoptions());
 
   return (
     <div className="grid grid-cols-3 gap-4 md:grid-cols-6">
@@ -13,7 +10,6 @@ function Adoptions() {
         <AdoptionsItem name={animal.name} age={animal.age} image={animal.image} key={index} />
       )
       )}
-      <AdoptionsItem name="173 More Pups" age="need adopting" link="/adoption"></AdoptionsItem>
     </div>
   )
 }

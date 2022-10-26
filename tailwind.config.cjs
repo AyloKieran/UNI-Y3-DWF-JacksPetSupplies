@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        jack: '#1c49c2',
-        jackLight: '#406be2'
+        jack: '#406be2',
+        jackLight: '#5f83e7'
       }
     },
   },
