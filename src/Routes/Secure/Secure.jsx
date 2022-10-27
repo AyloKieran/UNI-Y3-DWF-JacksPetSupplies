@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../FirebaseAuth";
 import { PageContent, Section } from "../../Components/Layout";
 import { generatePageTitle } from "../../Utilities";
-
+import Receipt from "../../assets/Receipt.png";
 
 function Secure() {
 
@@ -23,8 +23,8 @@ function Secure() {
     return (
         <PageContent>
             <Section title="Member's Area" subtitle="Exclusive deals and vouchers for Jack's Members">
-                <div className="text-red-500 font-black text-3xl">
-                    VOUCHER HERE
+                <div className="mx-auto">
+                    <img src={Receipt} className="max-w-xs rounded-xl shadow-xl" />
                 </div>
             </Section>
         </PageContent>
