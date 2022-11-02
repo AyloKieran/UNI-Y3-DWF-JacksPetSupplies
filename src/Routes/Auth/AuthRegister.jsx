@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, registerWithEmailAndPassword } from "../../FirebaseAuth";
+import { useFirebaseAuth, doRegister } from "../../FirebaseAuth";
 
 function AuthRegister() {
+
+    const [isAuthenticated] = useFirebaseAuth();
+    const navigate = useNavigate();
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [user, loading, error] = useAuthState(auth);
-    const navigate = useNavigate();
 
     const register = (e) => {
         e.preventDefault();
-        registerWithEmailAndPassword(name, email, password);
+        doRegister(name, email, password);
     };
 
     useEffect(() => {
-        if (loading) return;
-        if (user) navigate("/secure");
-    }, [user, loading]);
+        if (isAuthenticated) navigate("/secure");
+    }, [isAuthenticated]);
 
     return (
         <div className="flex justify-center">

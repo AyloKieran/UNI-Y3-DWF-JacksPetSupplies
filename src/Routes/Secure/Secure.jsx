@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../FirebaseAuth";
+import { useFirebaseAuth } from "../../FirebaseAuth";
 import { PageContent, Section } from "../../Components/Layout";
 import { generatePageTitle } from "../../Utilities";
 import Receipt from "../../assets/Receipt.png";
 
 function Secure() {
 
-    const [user, loading] = useAuthState(auth);
+    const [isAuthenticated] = useFirebaseAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -16,9 +15,8 @@ function Secure() {
     });
 
     useEffect(() => {
-        if (loading) return;
-        if (!user) navigate("/auth/no-access");
-    }, [user, loading]);
+        if (isAuthenticated == false) navigate("/auth/no-access");
+    }, [isAuthenticated]);
 
     return (
         <PageContent>

@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useFirebaseAuth } from "../../FirebaseAuth";
 import { Auth } from "./";
-import { auth } from "../../FirebaseAuth";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShopLock, faCartShopping, faCat, faSearch, faHome, faShop, faShieldDog } from '@fortawesome/free-solid-svg-icons';
 
 function DesktopNavigation() {
-    const [user, loading] = useAuthState(auth);
+    const [isAuthenticated] = useFirebaseAuth();
 
     return (
         <div className="hidden md:flex bg-jack text-white gap-4 p-2 px-4">
@@ -26,7 +25,7 @@ function DesktopNavigation() {
                     <FontAwesomeIcon icon={faShieldDog} />
                     <span className="font-semibold">Adoption</span>
                 </Link>
-                {!loading && user &&
+                {isAuthenticated &&
                     <Link to="/secure" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jack-light hover:text-white rounded">
                         <FontAwesomeIcon icon={faShopLock} />
                         <span className="font-semibold">Member's Area</span>
