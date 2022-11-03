@@ -26,7 +26,7 @@ function DesktopNavigation() {
                     <span className="font-semibold">Adoption</span>
                 </Link>
                 {isAuthenticated &&
-                    <Link to="/secure" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jack-light hover:text-white rounded">
+                    <Link to="/members-area" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jack-light hover:text-white rounded">
                         <FontAwesomeIcon icon={faShopLock} />
                         <span className="font-semibold">Member's Area</span>
                     </Link>

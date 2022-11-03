@@ -75,7 +75,7 @@ function MobileNavigation() {
                         <FontAwesomeIcon icon={faChevronRight} className="text-gray-500 my-auto" />
                     </Link>
                     {isAuthenticated &&
-                        <Link to="/secure" className="flex justify-between p-4 border-b-2 hover:bg-gray-100">
+                        <Link to="/members-area" className="flex justify-between p-4 border-b-2 hover:bg-gray-100">
                             <div className="flex gap-4 my-auto">
                                 <FontAwesomeIcon icon={faShopLock} className="text-jack-light my-auto" />
                                 <span className="font-semibold">Member's Area</span>

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./Components/Layout";
 import { Home, Shop, Adoption, NotFound } from "./Routes";
 import { AuthLogin, AuthRegister, NoAccess } from "./Routes/Auth";
-import { Secure } from "./Routes/Secure";
+import { MembersArea } from "./Routes/MembersArea";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
             <Route path="/auth/register" element={<AuthRegister />} />
             <Route path="/auth/no-access" element={<NoAccess />} />
           </Route>
-          <Route path="/secure" element={<Secure />} />
+          <Route path="/members-area" element={<MembersArea />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

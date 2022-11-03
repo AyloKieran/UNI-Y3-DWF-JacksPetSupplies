@@ -5,7 +5,7 @@ import { PageContent, Section } from "../../Components/Layout";
 import { generatePageTitle } from "../../Utilities";
 import Receipt from "../../assets/Receipt.png";
 
-function Secure() {
+function MembersArea() {
 
     const [isAuthenticated] = useFirebaseAuth();
     const navigate = useNavigate();
@@ -29,4 +29,4 @@ function Secure() {
     )
 }
 
-export default Secure
+export default MembersArea

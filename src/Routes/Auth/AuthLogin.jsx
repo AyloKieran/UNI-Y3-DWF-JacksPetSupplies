@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFirebaseAuth, doLogin } from "../../FirebaseAuth";
+import { generatePageTitle } from "../../Utilities";
 
 function AuthLogin() {
 
@@ -16,8 +17,12 @@ function AuthLogin() {
     };
 
     useEffect(() => {
-        if (isAuthenticated) navigate("/secure");
+        if (isAuthenticated) navigate("/members-area");
     }, [isAuthenticated]);
+
+    useEffect(() => {
+        document.title = generatePageTitle("Login");
+    });
 
     return (
         <div className="flex justify-center">
