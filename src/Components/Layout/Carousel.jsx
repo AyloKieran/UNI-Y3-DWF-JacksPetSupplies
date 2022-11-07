@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { getCarouselItems } from "../../Data/Carousel";
 import Slider from "react-slick";
 
@@ -18,9 +20,9 @@ function Carousel() {
         <section className="-m-4 -mb-8 relative aspect-[991/317]">
             <Slider {...settings} className="absolute top-0 left-0 right-0">
                 {getCarouselItems().map((item, index) => (
-                    <div key={index}>
-                        <img src={item} />
-                    </div>
+                    <Link to="/shop" key={index}>
+                        <img src={item} alt="Advertising image for Shop" title="Advertising image for Shop" />
+                    </Link>
                 ))}
             </Slider>
         </section >

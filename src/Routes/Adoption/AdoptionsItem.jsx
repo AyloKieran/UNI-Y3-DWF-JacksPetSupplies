@@ -7,7 +7,7 @@ function AdoptionsItem(props) {
   return (
     <Link to={props.link} className="group flex flex-col w-full gap-1 bg-gray-100 dark:bg-gray-700 rounded-xl p-2">
       {props.image &&
-        <img className="rounded-xl aspect-square object-cover bg-gray-200" src={props.image}></img>
+        <img className="rounded-xl aspect-square object-cover bg-gray-200" src={props.image} alt={`Photograph of ${props.name}`} title={`Photograph of ${props.name}`} />
       }
       {!props.image &&
         <div className="rounded-xl flex justify-center items-center aspect-square bg-gray-200 dark:bg-gray-500">

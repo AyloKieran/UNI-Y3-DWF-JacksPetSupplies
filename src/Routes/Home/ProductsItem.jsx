@@ -7,8 +7,7 @@ function ProductsItem(props) {
   return (
     <Link to={props.link} className="group flex flex-col w-full gap-2">
       {props.image &&
-        <img className="rounded-full flex justify-center items-center aspect-square bg-gray-100 dark:bg-gray-700"
-          src={props.image}></img>}
+        <img className="rounded-full flex justify-center items-center aspect-square bg-gray-100 dark:bg-gray-700" src={props.image} alt={`Photograph of ${props.title}`} title={`Photograph of ${props.title}`} />}
       {!props.image &&
         <div className="rounded-full flex justify-center items-center aspect-square bg-gray-100 dark:bg-gray-700">
           <FontAwesomeIcon icon={faArrowRight} className="text-xl group-hover:text-3xl transition-all" />
