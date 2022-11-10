@@ -31,9 +31,9 @@ function MobileNavigation() {
                 <button className="flex justify-start my-auto" onClick={() => { _toggleNav(); }}>
                     <FontAwesomeIcon icon={faBars} />
                 </button>
-                <div className="flex justify-center tracking-wider font-black text-md">
+                <Link to="/" className="flex justify-center tracking-wider font-black text-md">
                     J<FontAwesomeIcon icon={faCat} />CK'S
-                </div>
+                </Link>
                 <div className="flex justify-end gap-4 my-auto">
                     <FontAwesomeIcon icon={faCartShopping} />
                     <Auth />

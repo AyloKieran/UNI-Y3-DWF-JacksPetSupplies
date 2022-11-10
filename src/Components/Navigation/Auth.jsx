@@ -33,7 +33,9 @@ function Auth() {
 
     return (
         <div>
-            <FontAwesomeIcon icon={faUser} className="flex justify-center my-auto" onClick={toggleModal} />
+            <Link>
+                <FontAwesomeIcon icon={faUser} className="flex justify-center my-auto" onClick={toggleModal} />
+            </Link>
             {modalOpen &&
                 <div className="absolute top-24 md:top-12 right-0 m-2 left-0 md:left-auto">
                     <div className="bg-gray-400 dark:bg-gray-600 p-2 shadow-lg rounded flex flex-col">

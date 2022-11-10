@@ -9,9 +9,9 @@ function DesktopNavigation() {
 
     return (
         <div className="hidden md:flex bg-jack text-white gap-4 p-2 px-4">
-            <div className="flex justify-start tracking-wider font-black text-2xl my-auto">
+            <Link to="/" className="flex justify-start tracking-wider font-black text-2xl my-auto">
                 J<FontAwesomeIcon icon={faCat} />CK'S
-            </div>
+            </Link>
             <div className="flex-grow flex border-l-2 border-jack-light/60 text-gray-100">
                 <Link to="/" className="-my-2 px-4 flex justify-center items-center gap-2 hover:bg-jack-light hover:text-white rounded">
                     <FontAwesomeIcon icon={faHome} />
